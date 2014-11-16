@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>LED Calculator</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/panel.css" rel="stylesheet">
+		<script src="js/require.js"></script>
+		<script>
+			require(['./config'], function (common) {
+				require(['./js/main']);
+			});
+		</script>
+	</head>
+	<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+
+		  <a class="navbar-brand" href="#">The World's Most Shitty LED Calculator</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+
+		</div>
+	  </div>
+	</nav>
+
+	<div class="container-fluid">
+
+		<div class="col-sm-3 col-md-2 sidebar">
+		<h3>Settings</h3>
+		<div class="row"></div>
+
+		<form class="form-inline" role="form">
+		<span><span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> 	Panel Size (in centimeters)</span>
+		  <div class="form-group">
+			<div class="input-group">
+			  <div class="input-group-addon "><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span></div>
+			  <input type="number" class="form-control " id="sizeW" placeholder="cm" value="48">
+			</div>
+		  </div>
+		   <div class="form-group">
+			<div class="input-group	">
+			  <div class="input-group-addon "><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span></div>
+			  <input type="number" class="form-control " id="sizeH" placeholder="cm" value="48">
+			</div>
+		 </div>
+
+		 	<div class="settings-spacer"></div>
+			<span><span class="glyphicon glyphicon-th" aria-hidden="true"></span> 	Pixels per panel</span>
+			<div class="form-group">
+				<div class="input-group">
+				  <div class="input-group-addon "><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span></div>
+				  <input type="number" class="form-control " id="pixelsW" placeholder="pixels" value="48">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<div class="input-group	">
+				  <div class="input-group-addon "><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span></div>
+				  <input type="number" class="form-control " id="pixelsH" placeholder="pixels" value="48">
+				</div>
+			  </div>
+
+			<div class="settings-spacer"></div>
+			<span><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> 	Build size</span>
+			<div class="form-group">
+				<div class="input-group">
+				  <div class="input-group-addon "><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span></div>
+				  <input type="number" class="form-control " id="buildW" placeholder="panels" value="12">
+				</div>
+			  </div>
+			   <div class="form-group">
+				<div class="input-group	">
+				  <div class="input-group-addon "><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span></div>
+				  <input type="number" class="form-control " id="buildH" placeholder="panels" value="7">
+				</div>
+			  </div>
+
+			  <div class="settings-spacer"></div>
+			<span><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> 	Optional info</span>
+			<div class="form-group">
+				<div class="input-group">
+				  <div class="input-group-addon "><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></div>
+				  <input type="number" class="form-control " id="weight" placeholder="Weight" value="">
+				</div>
+
+			 </div>
+
+			  <div class="settings-spacer"></div>
+			  <button type="button" class="btn btn-primary btn-lg btn-block plot">Plot it</button>
+			  </form>
+			  <div class="settings-spacer"></div>
+			  <div class="data-info">
+			  </div>
+		</div>
+
+
+
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2	main">
+		  <h1 class="page-header">WALL</h1>
+
+
+		  <div class="row" id="filler">
+
+		  </div>
+
+		</div>
+	  </div>
+	</div>
+
+	</body>
+</html>
